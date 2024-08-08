@@ -21,6 +21,19 @@ public class principal {
 		  Date checkOut = sdf.parse(sc.next());
 		  Reservation rs = new Reservation(numberr, checkIn , checkOut);
 		  System.out.println(rs);
+		  
+		  System.out.println("Do you want to change something(Y/N)? ");
+		  String rp = sc.next().toUpperCase();
+		  if(rp.equals("Y")) {
+			  System.out.println("Hello. Welcome to Palace Hotel!!!");
+			  System.out.println("Insert a room number: ");
+			  numberr = sc.nextInt();
+			  System.out.println("Insert a check-In date: ");
+			  checkIn = sdf.parse(sc.next());
+			  System.out.println("Insert a check-Out date: ");
+			  checkOut = sdf.parse(sc.next());
+			  
+		  }
 		}
 		catch(ParseException e) {
 			System.out.println("invalid date ");
